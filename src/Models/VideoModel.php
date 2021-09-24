@@ -75,4 +75,11 @@ interface VideoModel
      * @return void
      */
     public function persist();
+
+    /**
+     * Check if the video file exists on the server.
+     *
+     * @return boolean
+     */
+    public function videoExists();
 }

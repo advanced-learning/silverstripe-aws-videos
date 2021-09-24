@@ -254,4 +254,9 @@ class AWSVideo extends DataObject implements VideoModel
     {
         return Injector::inst()->get('AdvancedLearning\AWSVideos\Services\VideoService');
     }
+
+    public function videoExists()
+    {
+        $this->File()->exists();
+    }
 }

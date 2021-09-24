@@ -196,6 +196,10 @@ class AWSVideoService implements VideoService
             throw new InvalidArgumentException('Could not find a video with ID ' . $id);
         }
 
+        if (!$video->videoExists()) {
+            throw new InvalidArgumentException("Could not find video file.");
+        }
+
         $path = $video->getVideoPath();
 
         // upload
