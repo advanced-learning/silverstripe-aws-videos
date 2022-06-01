@@ -35,7 +35,8 @@ class AWSVideo extends DataObject implements VideoModel
     ];
 
     private static $has_one = [
-        'File' => 'File'
+        'File' => 'File',
+        'ThumbnailOverride' => 'Image',
     ];
 
     private static $summary_fields = [
